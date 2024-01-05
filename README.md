@@ -1,5 +1,7 @@
 # 8-sidor-word-frequencies
-Analysing portrayals of women in Swedish newspaper _8 sidor_ between 2003 and 2012 using word frequencies
+_This is my final project for the course Computational Literacy. The project analyses portrayals of women in Swedish newspaper _8 sidor_ between 2003 and 2012 using word frequencies._
+
+The documents contain **two Python files** with the code I used to extract the necessary data and **two TXT files** including lists of the most commonly used words in both searches.
 
 **Introduction**
 
@@ -9,17 +11,17 @@ I wanted to examine whether this tendency holds true in the Swedish context, sin
 
 **Dataset**
 
-The dataset includes a corpus containing articles from _8 sidor_ published between 2003 and 2012. For my analysis, I accessed the data through the concordancer Korp (available through [this link]([url](https://spraakbanken.gu.se/korp/#?corpus=attasidor&cqp=%5B%5D))).
+The dataset includes a corpus containing articles from _8 sidor_ published between 2003 and 2012. For my analysis, I accessed the data through the concordancer Korp (available through [this link](https://spraakbanken.gu.se/korp/#?corpus=attasidor&cqp=%5B%5D)).
 
 To answer my first research question, regarding how women are portrayed in the articles, I searched for keywords including the root _kvinn_. Then, to see whether there were any differences compared to articles explicitly mentioning men, I searched for the word _man_ in all its forms (i.e., _man, mannen, män, männen_). Searching by root was not possible in this case, since the word changes vowel in plural; therefore, I added all four forms to the search as separate words.
 
 **Processing the data and analysis**
 
-I used Python to get the search results from Korp. I took inspiration from an earlier project comparing differences in use between the words _maahanmuuttaja_ and _pakolainen_ in Finnish newspapers. The project can be accessed through [this link]([url](https://zenodo.org/records/44544)).
+I used Python to get the search results from Korp. I took inspiration from an earlier project comparing differences in use between the words _maahanmuuttaja_ and _pakolainen_ in Finnish newspapers. The project can be accessed through [this link](https://zenodo.org/records/44544).
 
-To clean up my data, I again used Python to remove stopwords. I relied on a predefined collection of Swedish stopwords, which is [available on GitHub]([url](https://github.com/stopwords-iso/stopwords-sv)) for free. It contains pronouns, numbers, common adjectives and adverbs. I also removed all capital letters.
+To clean up my data, I again used Python to remove stopwords. I relied on a predefined collection of Swedish stopwords, which is [available on GitHub](https://github.com/stopwords-iso/stopwords-sv) for free. It contains pronouns, numbers, common adjectives and adverbs. I also removed all capital letters.
 
-My initial plan for this project was to create a topic model of the relevant articles mentioning women and men, respectively. However, after a closer look at the data I realised that the corpus data has been scrambled for copyright reasons, meaning that all sentences appear in a randomised order. The original texts could not be recreated, and creating a topic model of these scrambled sentences would be meaningless. For this reason, I decided to focus on word frequencies instead. After filtering the search results for both women and men, I extracted the 30 most frequently used words in each case. The results have been linked as TXT files.
+My initial plan for this project was to create a topic model of the relevant articles mentioning women and men, respectively. However, after a closer look at the data I realised that the corpus data has been scrambled for copyright reasons, meaning that all sentences appear in a randomised order. The original texts could not be recreated, and creating a topic model of these scrambled sentences would be meaningless. For this reason, I decided to focus on word frequencies instead. After filtering the search results for both women and men, I extracted the 30 most frequently used words in each case. The results have been linked to this repository as TXT files.
 
 **Results and limitations**
 
